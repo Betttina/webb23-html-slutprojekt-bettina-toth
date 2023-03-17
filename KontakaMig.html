@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontakta mig</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- App title -->
+    <title>Bettina</title>
+    <!-- Link CSS file -->
+    <link rel="stylesheet" href="hemsidan.css">
+    <!-- Länk till Bootstrap CSS-filen -->
+    <link rel="stylesheet" href="./bootstrap-5.3.0-alpha1-dist/bootstrap-5.3.0-alpha1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-9P+XrQ3kq3rKzxE+kAcx6U5h1KuJ7Y0+TwMhfO7gXyK67hNHysfJGwC+ayxjrASAmT+TSfI83YK22G8v1/Xa1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-Ld1R0loCxIoCwQePl72Z8+FHc12R1O/kOyX9ZZpw/TddsbND3qDd5sq5x5ou5Z5tiQuVdLPCt+MQ7PgrH+bpw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    -->
+    <script src="portfolio.js"></script>
+
+</head>
+<body>
+<!--navigationsmeny med bootstrapkomponent-->
+<nav class="navbar navbar-expand-md navbar-light navbar-transparent"> <!--navbar som sträcker sig med genomskinglig bakgrund-->
+    <div class="container-fluid"> <!--behållare som tar upp hela utrymmet, bootstrap komponent-->
+        <a class="navbar-brand" href="index.html"> <!--definerar en logo som fungerar som en länk-->
+            <img src="img/bettinatransp.png" alt="Logo" width="280" height="200" class="d-inline-block align-text-top"> <!--sätter bilden som ett block, horisontellt, elementet vertikalt centralt med text bredvid-->
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <!--visa och dölja navmeny, responsiv, utseende när de åker upp och ner och utseende på knapp-->
+            <span class="navbar-toggler-icon"></span> <!--knapp med valbar knapp, viss utseende-->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav"> <!--skapar ul nav meny-->
+                <li class="nav-item"> <!--skapar lista i navbar-->
+                    <a class="nav-link" href="index.html">Hem</a>
+                </li>
+                <li class="nav-item dropdown"> <!--meny som rullar ner från navbar-->
+                    <a class="nav-link dropdown-toggle" href="minaprojekt.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mina projekt</a> <!--beteende på action-->
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> <!--submenyer som åker neråt från Mina projekt-->
+                        <li><a class="dropdown-item" href="minaprojekt.html">Presentation av projekten</a></li>
+                        <li><a class="dropdown-item" href="KoreanskResturangHemsida.html">Restauranghemsida</a></li>
+                        <li><a class="dropdown-item" href="Portfolio.html">Portfoliohemsida</a></li>
+                        <li><a class="dropdown-item" href="projekt4.html">Informativ hemsida</a></li>
+                        <li><a class="dropdown-item" href="projekt3.html">Möbelhemsida</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"> <!--annat list element-->
+                    <a class="nav-link" href="OmMig.html">Om mig</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="KontakaMig.html">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
+<div class="b-example-divider mt-5"></div>
+<!--osynlig divider från bootstrap, margin top 5 units, för att ge utrymme mellan element-->
+
+
+<!--bootstrap komponent för kontakta mig info ruta med bild-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-lg-9 d-flex align-items-stretch"> <!--kolumn i flexbox, fyller ut höjden på elementet-->
+            <div class="row"> <!-- grupperar innehåll i kolumner -->
+                <div class="col-md-6"> <!--kolumn med width på 6 av 12 kolumner som tar upp halva skärmen i responsiv grid layout i rad*/-->
+                    <picture><img src="img/selfie2.jpg" alt="selfie"></picture>
+                </div>
+                <div class="col-md-6"><p>Jag ser fram emot att höra från dig och att kunna svara på eventuella
+                        frågor eller funderingar du kan ha.
+
+                        Du kan skicka mig ett meddelande direkt här på sidan genom att
+                        fylla i formuläret nedan. Jag försöker alltid svara så snabbt som möjligt,
+                        vanligtvis inom 24 timmar. </p>
+                    <p>
+                        Om du föredrar att kommunicera via e-post, kan du också skicka ett
+                        meddelande till min e-postadress <a href="mailto:hej@bettina.nu">hej@bettina.nu</a>
+                        .
+                        Jag svarar på alla e-postmeddelanden personligen, så tveka inte att kontakta mig.
+
+                        Slutligen kan du också nå mig genom mina sociala mediekanaler.
+                        Du hittar mig på [dina sociala mediekanaler här] och jag är alltid
+                        öppen för att ta emot meddelanden där.
+
+                        Tack för att du tog dig tid att besöka min Kontakta mig sida.
+                        Jag ser fram emot att höra från dig snart!</p>
+                    <div class="contact-container">
+                        <div class="col-lg-6 col-md-12 mb-4 mb-md-0 d-flex justify-content-center">
+                            <div class="col-md-4 col-lg-3">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!--kontakta mig element-->
+<div class="container">
+    <div class="d-flex justify-content-center align-items-center vh-100"> <!--centrerar koden horisontellt+vertikalt i mitten på min hemsida-->
+        <div class="contact-card">
+            <div class="contact-card-body">
+                <h5 class="contact-card-title">Mejla mig! <i class="fas fa-envelope"></i></h5>
+                <p class="contact-card-text">
+                    <a href="mailto:hej@bettina.nu" target="_blank" rel="noopener noreferrer"></a>
+                </p>
+                <p>
+                    Jag är alltid öppen för feedback och förslag, så tveka inte att kontakta mig om du har några
+                    frågor eller kommentarer. Tack för att du besökte min portfolio!
+                </p>
+                <a href="#kontaktformulär" class="contact-btn btn-primary">Skriv till mig!</a> <!--a href för att ta mig till formuläret-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--kontaktformulär-->
+
+<div class="form-group" id="kontaktformulär">
+<div class="container">
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <form>
+            <div class="box-for-form">
+                <div class="row form justify-content-center">
+                    <div class="col-md-12">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="col-md-10">
+                                <div class="contact-form">
+                                    <div class="form-group">
+                                        <h2>Kontaktformulär</h2>
+                                        <label for="name">Namn</label>
+                                        <input type="text" class="form-control" id="name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">E-post</label>
+                                        <input type="email" class="form-control" id="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="subject">Ämne</label>
+                                        <input type="text" class="form-control" id="subject">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message">Meddelande</label>
+                                        <textarea class="form-control" id="message" rows="5"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Skicka</button>
+                                    <div id="confirmation-message" style="display: none;">
+                                        Tack för ditt meddelande!
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+<!--footer-->
+<footer class="jumbotron">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="img/bettinatransp.png" alt="Logo" width="150" height="150">
+            </div>
+            <div class="col-md-4">
+                <h5 class="mb-3">Sidor</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-light">Hem</a></li>
+                    <li><a href="minaprojekt.html" class="text-light">Mina projekt</a></li>
+                    <li><a href="OmMig.html" class="text-light">Om mig</a></li>
+                    <li><a href="KontakaMig.html" class="text-light">Kontakta mig</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="col-md-4">
+                <h5 class="mb-3">Följ mig!</h5>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://www.facebook.com/bbettinatoth"
+                                                    class="text-light"><i
+                            class="fab fa-facebook-f fa-lg"></i></a></li>
+                    <li class="list-inline-item"><a href="" class="text-light"><i
+                            class="fab fa-twitter fa-lg"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/bettinatothh/"
+                                                    class="text-light"><i
+                            class="fab fa-linkedin fa-lg"></i></a></li>
+                    <li class="list-inline-item"><a href="https://github.com/Betttina"
+                                                    class="text-light"><i
+                            class="fab fa-github fa-lg"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.instagram.com/bettobox/"
+                                                    class="text-light"><i
+                            class="fab fa-instagram fa-lg"></i></a></li>
+                    <li class="list-inline-item"></li>
+
+
+                </ul>
+                <div class="d-flex align-items-end justify-content-end">
+                    <p class="me-3 mb-0">Scrolla upp till toppen</p>
+                    <a href="#" class="btn btn-primary rounded-circle"><i
+                            class="fas fa-arrow-up"></i></a>
+                </div>
+                <div class="d-flex align-items-end justify-content-end">
+                    <p class="me-1 mb-0 small">&copy; Bettina. Alla rättigheter förbehållna.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+
+</main>
+
+
+
+
+
+</body>
+</html>
+<!-- Länk till Bootstrap JavaScript-filen-->
+<script src="./bootstrap-5.3.0-alpha1-dist/bootstrap-5.3.0-alpha1-dist/js/bootstrap.js"></script>
+<script src="portfolio.js"></script>
+<!--länk till quiery js-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js" integrity="sha512-ezBZMPhoA0T8Z+MF9OITNtO1cBtv/QF8+QWzLsOZ58Pc4a3q8m1cvRpXmX0RlJlrDfAgGzxDkLx0xRn23ZdYbA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,684 @@
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Raleway:wght@400;500&family=Titillium+Web:wght@600&family=Zilla+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* margin, padding och box-sizing till ett standardiserat värde, fastän man använder andra webbläsare*/
+}
+
+:root {
+    --theme: "light"; /* pseudo-klass, sätter temat till ljust */
+}
+
+
+
+/* Ljusläge tema */
+@media (prefers-color-scheme: light) {
+
+    .jumbotron a {
+        color: rgba(58, 58, 58, 0.43) !important; /* färg på font-färgen i länkarna i footer*/
+        text-decoration: none; /* tar bort understreck*/
+        font-family: 'Fragment Mono', monospace; /*font*/
+        font-size: 1.5rem;
+    }
+
+    /* Bakgrundsfärg när man hover över en länk i footer*/
+    .jumbotron a:hover {
+        background-image: linear-gradient(45deg, #3180bd, #FF0099FF) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+    }
+
+    body {
+        background-image: url("img/pexelvit.jpeg"); /*den vita bakgrunden med vita streck*/
+        font-family: 'Zilla Slab', serif;
+        background-size: cover !important; /*täcker hela sidan*/
+    }
+}
+
+
+
+/******styling för mörkt läge (dark mode) ********/
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #f0f0f0; /* ljus textfärg */
+        height: 100vh; /* sätter höjden till hela skärmen */
+        filter:brightness(0.6); /*sänker ljusstyrkan*/
+    }
+
+    /* färgen på en länk i dark-mode */
+    a {
+        color: #80c7ff; /* ljusblå färg i dark mode på länkar*/
+    }
+
+    body p {
+        background-color: #3b3a3a; /*bakgrundsfärgen i mörkt läge till alla p element*/
+        color: #fff; /*textfärg på p*/
+    }
+
+    body {
+        background-image: url('https://images.pexels.com/photos/2409038/pexels-photo-2409038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /*ändrar bakgrund till denna i mörkt läge*/
+        background-size: cover; /*täcker hela body*/
+        filter: brightness(50%); /*filter med ljusskala för att få mjukare ljus för ögonen*/
+    }
+    .jumbotron {
+        background-color: #4f4c4c;
+    }
+
+    footer h2 {
+        color: #adb5bd !important;
+    }
+
+    .jumbotron a {
+        color: #adb5bd !important;
+    }
+
+    h1, h2, h5 {
+
+        color: #adb5bd !important;
+    }
+
+    footer i {
+        color: #adb5bd;
+    }
+
+    .navbar {
+        background-color: rgba(53, 58, 58, 0.24); /*genomskinlig med grå skala*/
+    }
+
+    .navbar-light .navbar-nav .nav-link{
+        color: white;
+    }
+
+    .container {
+        background-color: grey;
+        height: auto; /*justerar automatiskt höjden på elementet */
+    }
+
+    .text-muted {
+        background-color: #adb5bd;
+    }
+
+    form button[type="submit"] {
+        border-style: solid;
+        border-color: magenta;
+    }
+
+    form button[type="submit"]:hover {
+        background-color: magenta;
+        color: white;
+    }
+    .dark-mode img {
+        filter: invert(1); /*sätter mörkare filter på img*/
+    }
+
+}
+
+
+
+/****** avslut på dark mode ********/
+
+
+
+/**********Main page***********/
+html {
+    -webkit-text-size-adjust: 100%; /*styr textstorleken på mobila enheter som kör webbläsare med WebKit-motor*/
+
+}
+/*animation på h1, där  texten är markerad med <span>*/
+.animated-text {
+    opacity: 0; /*elementet är osynlig*/
+    animation: slide-in 1s ease forwards; /*duration och stannar på sin plats när animationen är klar*/
+    font-family: 'Dancing Script', cursive; /*byter font på span*/
+}
+/*till animationen*/
+@keyframes slide-in {
+    from {
+        opacity: 0; /*först osynlig*/
+        transform: translateY(-50px); /*flyttas ner så mycket*/
+    }
+
+    to {
+        opacity: 1; /*fullt synlig*/
+        transform: translateY(0); /*återgår till normal position*/
+    }
+}
+
+
+/*stilregler för h1*/
+h1 {
+    font-size: 5rem; /* h1 förstoras fem gånger större än standardstorlek på texten*/
+    text-align: center; /* texten placeras centrerat på hemsidan */
+    position: relative; /* andra element placeras relativt till detta element*/
+    padding-bottom: 3rem; /* mellanrum på botten till andra element */
+    padding-left: 1rem; /* mellanrum till andra element, till vänster*/
+    font-family: 'Fragment Mono', monospace; /* detta typsnitt används på h1 rubriker, monospace används om Fragment inte är tillgänglig*/
+}
+
+h1 span {
+    display: inline-block;
+    animation-name: letter-anim; /* animation på bokstäver, namnet på animationsvarianten*/
+    animation-duration: 3s; /*animationens duration*/
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); /*timingfunktion för animering*/
+    animation-fill-mode: both; /* h1 återgår till sitt normala utseende när animationen är över */
+}
+
+a {
+    text-decoration: none; /* tar bort understreck under alla länkar */
+}
+
+ul {
+    list-style: none; /* tar bort punkter och siffror framför listade ord, både ordnad och oordnad */
+}
+
+/********main page end***************/
+
+/*************** Navigations meny ************/
+.nav {
+    width: 100%; /* tar upp hela platsen i elementet*/
+    height: 50%; /* 10% av elementets höjd, tar den upp */
+    position: fixed; /* sitter fast på sitt ställe */
+    overflow: hidden; /* saker döljs som kommer utanför elementet, allt överflöd */
+}
+
+.navbar-nav {
+    display: flex !important; /*placeras i flexlayout*/
+    justify-content: space-between !important; /*sätter mellanrum mellan sido-valen*/
+    align-items: center; /*centrerar horisontellt*/
+    margin-left: 5rem; /*avstånd från andra element till vänster, för att få menyn relativt centrerat*/
+}
+
+.nav-link {
+    margin-right: 2rem; /*mellanrum mellan sidolänkarna i navbaren*/
+}
+
+
+.navbar-nav .nav-link {
+    font-family: 'Fragment Mono', monospace; /*fonten på sidolänkarna*/
+    font-size: 24px; /*storlek på texten*/
+    color: #333; /*textfärg*/
+    transition: all 0.1s ease-in-out;
+
+}
+
+.navbar-nav li a {
+    letter-spacing: 2px; /* mellanrum mellan bokstäverna, just på navbarens länktexter */
+}
+
+
+
+.navbar-brand img:hover {
+    cursor: default;
+    filter: none;
+    pointer-events: none;
+    transition: none;
+}
+
+.navbar-nav .nav-link:hover {
+    animation: bg-color 1s; /*animationen varar i en sekund*/
+    border-radius: 0.5rem; /*rundade kanter på bakgrundsfärgen*/
+
+}
+/*animationen varar i en sekund, alltså att bakgrunden på navlänkarna blir rosa,
+ men återgår sedan igen till genomskinligt, precis som i början*/
+@keyframes bg-color {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: #006fff;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+
+.navbar-brand img {
+    max-width: 100%;
+}
+/*logga max utrymme bredd*/
+
+.nav-link {
+    border-bottom: 4px solid #ee4fd1; /*sträck under nav länkar*/
+}
+
+/*skärmar med maxbredd antal pixlar får denna attributen*/
+@media (max-width: 767px) {
+    .navbar-nav .nav-link {
+        font-size: 0.9rem; /* Justering av storleken här för mindre skärmar */
+    }
+
+}
+
+/* navbar avslut */
+
+
+/* Responsiveness */
+@media (min-width: 768px) {
+    .nav {
+        max-height: none; /*höjden anpassas till navbarens innehåll*/
+        top: 0; /*placering högst upp på sidan*/
+        position: relative; /*navbaren ska ej sitta fast på skärmen*/
+        float: right; /*navbar placeras till höger*/
+        width: fit-content; /*lika bred som navbarens innehåll*/
+        background-color: transparent; /*genomskinglig bakgrund*/
+    }
+
+}
+
+/* index html */
+
+/* egenskaper till bilderna som ligger i projektpresentations conteinern*/
+.card-img, .card-img-bottom, .card-img-top {
+    width: 100%; /*tar upp all plats i sin element*/
+    height: 13rem; /*höjd*/
+}
+
+
+
+/*textbox*/
+.text-box {
+
+    margin-bottom: 5rem; /*avstånd till nästa element*/
+    font-family: 'Raleway', sans-serif;
+    font-size: medium; /*gör texten större*/
+    display: flex; /*flex behållare layout*/
+    flex-direction: row; /*ordnas i rad, vänster till höger*/
+    justify-content: space-between; /*sätter mellanrum mellan innehållen*/
+    align-items: center; /*horisontellt centrerad*/
+}
+
+
+
+.image {
+    flex: 1; /*renderas överst, längst fram liksom*/
+    padding: 20px; /*utfyllnad i element*/
+    height: 100%; /*tar upp hela höjden av elementet*/
+    width: 50%; /*tar bara upp hälften av bredden*/
+}
+
+.text {
+    font-size: 1.2em; /*storlek på text i denna div*/
+    margin-left: 300px; /*vänsta sidan är det 300px till nästa element*/
+}
+
+.row {
+    display: flex; /*flex layout*/
+    flex-wrap: wrap; /*element flyttas till nästa rad när de har nått elementets maxbredd*/
+    justify-content: center; /*centrerar innehåll horisontellt*/
+}
+
+/*textbox slut*/
+
+
+
+
+/* Gör så att rubriktexten har en mörkgrå färg */
+h2 {
+    color: #444;
+}
+
+
+/* Gör så att knappen har en ljusblå bakgrundsfärg och en mörkblå färg för texten */
+.btn-primary {
+    background-color: #c5e1f7;
+    border-color: #3180bd;
+    color: #3180bd;
+}
+
+.btn-primary:hover {
+    background-color: #3180bd;
+    border-color: #3180bd;
+    color: #fff;
+}
+
+p {
+    color: black; /* Ändra textfärgen */
+    font-size: 20px; /* Ändra textstorleken */
+    font-weight: normal; /* Ändra textvikten */
+    line-height: 1.5; /* Ändra radavståndet */
+    /*
+    padding: 10px; !* Lägg till en padding runt texten *!
+    */
+    margin: 10px 0; /* Lägg till ett margin mellan paragrafer */
+    text-align: left; /* Justera texten till vänster, höger eller mitten */
+    font-family: 'Fragment Mono', monospace !important;
+    word-wrap: break-word;
+}
+
+/*mina projekt sidan*/
+.container {
+    margin-bottom: 1rem;
+    letter-spacing: 0.005rem;
+    background-color: transparent !important;
+    /*padding: 5rem 5rem;*/
+
+}
+
+.container h2 {
+    padding: 2rem; /**/
+}
+
+.jumbotron {
+    padding: 2rem 1rem; /*över och underkant, sen utfyllnad på sidorna*/
+    margin-bottom: 2rem; /*avstånd nertill*/
+    background-color: transparent !important;
+    border-radius: 0.3rem; /*rundar hörnen lite*/
+}
+
+.readmore {
+    position: center;
+}
+
+.col-sm-6 {
+    display: flex;
+    flex-direction: column !important; /*renderas i kolumner*/
+    justify-content: center !important;
+    align-items: center !important;
+
+    color: black; /* textfärgen */
+    font-size: 14px; /* textstorleken */
+    font-weight: normal; /* tjocklek på text */
+    line-height: 1.5; /* radavståndet */
+    padding: 10px; /* padding runt texten */
+    margin: 10px 0; /* margin mellan paragrafer */
+    text-align: left; /* Justera texten till vänster, höger eller mitten */
+    font-family: 'Fragment Mono', monospace !important; /* font stil*/
+    word-wrap: break-word; /*radbrytning*/
+
+}
+
+.col-sm-6 img {
+    margin-bottom: 1rem;
+}
+
+.container-marketing {
+    background-color: transparent !important;
+}
+
+img.img-fluid:hover {
+    transform: scale(1.1); /*bilden förstoras till 110%*/
+    transition: transform 0.6s ease-in-out; /*hur snabbt animationen ska gå, övergången*/
+    border-radius: 3rem; /*rundade hörn vid hover*/
+}
+
+.featurette {
+    margin-bottom: 5rem; /*avstånd till nästa element nertill*/
+}
+
+.featurette-divider {
+    border-top: 2px solid #FF0099FF; /*färg på avdelare*/
+}
+
+.featurette h2, p {
+    font-family: 'Titillium Web', sans-serif; /*ändrar font på h2 och p i denna div*/
+}
+
+.featurette-image {
+    max-width: 100%; /*hela bredden av elementet beroende på innehåll*/
+    height: auto;
+    border: 2px solid #333;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /*skugga runt bilden*/
+    transition: all 0.3s ease-in-out;
+
+}
+
+.featurette-image:hover {
+    transform: scale(1.05); /*bilden förstoras 105% när man hovrar */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /*och ger lite skugga*/
+    border-color: #555; /*med en kantfärg*/
+}
+
+
+/* Min koreana hemsida projekt sida*/
+
+
+.container p {
+    font-family: 'Fragment Mono', monospace;
+    font-size: 18px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    overflow-wrap: break-word; /*bryter ord när den kommer i kanten på elementet*/
+    word-wrap: break-word;   /*detta gör att en ny rad börjas och flyttas ned*/
+}
+
+img {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    max-width: 100%;
+    height: auto;
+}
+
+img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.visually-hidden {
+    color: white;
+}
+
+/*********************** Footer CSS ******************/
+
+/*anpassning till mobilvy på footern*/
+@media (max-width: 767px) {
+    footer {
+        font-size: 0.9rem; /* Justera storleken här för mindre skärmar */
+    }
+}
+
+footer {
+background-color: transparent!important; /*bakgrundsfärg på hela footer-behållaren*/
+    margin-top: 10rem;
+}
+.footer {
+    background-color: transparent !important;
+    position: relative;
+}
+
+footer p {
+    font-size: 80% !important;
+    padding-top: 4rem;
+}
+
+.list-inline {
+    padding: 2rem;
+}
+
+.me-3 {
+    font-size: 1rem !important;
+    margin: 1rem;
+}
+
+
+/*footer css avslut*/
+
+
+
+/* kontakta mig */
+
+/* Stil skicka för knappen */
+
+
+form label {
+    font-weight: bold; /*tjock text på titlarna till textrutorna i kontaktformulären*/
+}
+
+
+
+
+/*kontaktformulär*/
+
+form {
+    display: flex; /*renderas i flexboxlayout*/
+    flex-direction: column; /*ordnas i kolumner*/
+    width: 50vw; /*bredd*/
+    margin-bottom: 5rem;
+    padding: 20px;
+    border: 3px solid #00bfff; /*kantfärg på formuläret*/
+    border-radius: 8px;
+    background-color: #c8d1ec;
+    box-shadow: 0 0 5px #ccc;
+}
+form input,
+form select,
+form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 15px solid #FF0099FF;
+    font-size: 16px;
+}
+
+form button[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(49, 128, 189);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer; /*ändrar muspekare till hand med pekfinger*/
+}
+
+form button[type="submit"]:hover {
+    background-color: #FF0099FF; /*när man hover skicka knappen blir den rosa*/
+}
+/*kontaktformulär end*/
+
+
+
+/* contakt conteiner */
+.contact-container {
+    width: 30rem;
+    margin-right: 15rem;
+}
+
+.contact-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50rem;
+}
+
+.contact-card-body {
+    padding: 30px;
+}
+
+.contact-card-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-card-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.contact-btn {
+    background-color: #3180bd;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #FF0099FF;
+    cursor: pointer;
+}
+
+/* Media queries */
+@media only screen and (max-width: 767px) {
+    .contact-container {
+        padding: 10px;
+    }
+    .contact-card-body {
+        padding: 20px;
+    }
+    .contact-card-title {
+        font-size: 24px;
+    }
+    .contact-card-text {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .contact-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+/*om mig sida*/
+.spin {
+    animation: spin 7s linear infinite; /*får en bild att snurra*/
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/*om mig avslut*/
+
+/* kontakta mig sida*/
+
+.col-md-6 p {
+    font-size: 17px;
+}
+
+.col-md-6 .d-flex {
+    height: 100%;
+}
+.d-flex.justify-content-center.align-items-center {
+    height: 100vh;
+}
+
+
+h2 {
+    text-align: center !important;
+    margin-bottom: 30px!important;
+}
+.contact-card-title {
+    animation: border-pulse 1s infinite linear;
+}
+
+@keyframes border-pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5)!important;
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5)!important;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5)!important;
+    }
+}
+
+/************kontakta mig sidan slut**********/
+
+
+/* koreanska restraurangen*/
+card body {
+    width: 15rem;
+}
+
+/*slut*/
+
+
+

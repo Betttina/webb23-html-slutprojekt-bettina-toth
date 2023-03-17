@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mina projekt</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--titel på hemsidan-->
+    <title>Mina projekt</title>
+
+    <!--länk till favikon-->
+    <link rel="shortcut icon" href="img/seal.png" type="image/x-icon">
+
+    <!-- länkad cssfil -->
+    <link rel="stylesheet" href="hemsidan.css">
+    <!-- länkad bootstrap css fil -->
+    <link rel="stylesheet" href="./bootstrap-5.3.0-alpha1-dist/bootstrap-5.3.0-alpha1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+<body>
+<!--navigationsmeny med bootstrapkomponent-->
+<nav class="navbar navbar-expand-md navbar-light navbar-transparent"> <!--navbar som sträcker sig med genomskinglig bakgrund-->
+    <div class="container-fluid"> <!--behållare som tar upp hela utrymmet, bootstrap komponent-->
+        <a class="navbar-brand" href="index.html"> <!--definerar en logo som fungerar som en länk-->
+            <img src="img/bettinatransp.png" alt="Logo" width="280" height="200" class="d-inline-block align-text-top"> <!--sätter bilden som ett block, horisontellt, elementet vertikalt centralt med text bredvid-->
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <!--visa och dölja navmeny, responsiv, utseende när de åker upp och ner och utseende på knapp-->
+            <span class="navbar-toggler-icon"></span> <!--knapp med valbar knapp, viss utseende-->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav"> <!--skapar ul nav meny-->
+                <li class="nav-item"> <!--skapar lista i navbar-->
+                    <a class="nav-link" href="index.html">Hem</a>
+                </li>
+                <li class="nav-item dropdown"> <!--meny som rullar ner från navbar-->
+                    <a class="nav-link dropdown-toggle" href="minaprojekt.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mina projekt</a> <!--beteende på action-->
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> <!--submenyer som åker neråt från Mina projekt-->
+                        <li><a class="dropdown-item" href="minaprojekt.html">Presentation av projekten</a></li>
+                        <li><a class="dropdown-item" href="KoreanskResturangHemsida.html">Restauranghemsida</a></li>
+                        <li><a class="dropdown-item" href="Portfolio.html">Portfoliohemsida</a></li>
+                        <li><a class="dropdown-item" href="projekt4.html">Informativ hemsida</a></li>
+                        <li><a class="dropdown-item" href="projekt3.html">Möbelhemsida</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"> <!--annat list element-->
+                    <a class="nav-link" href="OmMig.html">Om mig</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="KontakaMig.html">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<main role="main">
+
+    <!-- bra huvudmeny, bootstrap komponent -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Mina projekt</h1>
+            <p>Här har jag samlat några av mina senaste projekt och jag är glada att få visa upp dem för dig. Mitt mål är att skapa användarvänliga och kreativa lösningar som hjälper till att lösa verkliga problem. Genom mina projekt har jag utvecklat mina färdigheter inom webbutveckling, design och användbarhet. Varje projekt är unikt och bygger på olika utmaningar och mål. Ta en titt och känn dig fri att kontakta mig om du har några frågor eller är intresserad av samarbete.</p>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap layout med rader och kolumner -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6"> <!--tar upp 6 av 12 kolumner på en liten skärm-->
+                <h2>Mitt senaste projekt</h2>
+
+                <p>Jag hjälpte nyligen en lokal koreansk restaurang med att skapa en ny hemsida som speglar
+                    deras unika och autentiska matkoncept. Genom att använda modern webbdesign och användarvänliga funktioner,
+                    skapade jag en webbplats som inte bara är visuellt tilltalande utan också praktiskt
+                    för besökare som söker information om restaurangen och dess meny.</p>
+            </div>
+            <div class="col-sm-6">
+                <img src="img/kor.png" alt="Bild på senaste projektet" class="img-fluid">
+            </div>
+            <p><a class="readmore" href="KoreanskResturangHemsida.html" role="button">Läs mer »</a></p>
+        </div>
+    </div>
+
+    <div class="container"> <!--behållare-->
+
+        <div class="container-marketing">
+
+            <hr class="featurette-divider"> <!--visuell avskiljare-->
+
+
+            <div class="row featurette"> <!--presentation för bild och text rad-->
+                <div class="col-md-7"><!--tar upp sju kolumner på mediumstor skärm-->
+                    <h2 class="featurette-heading fw-normal lh-1">Vem gillar inte koreansk mat? <span class="text-muted">It’ll blow your mind.</span></h2>
+                    <p class="lead">Här kan du läsa och kolla på fler bilder på hemsidan jag gjorde till min favoritrestaurang, nämligen Koreana</p>
+                </div>
+                <div class="col-md-5"> <!--tar upp fem kolumner på mediumstor skärm-->
+                    <img src="img/kore2.png" alt="Beskrivning av bilden" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+                </div>
+            </div>
+
+
+            <hr class="featurette-divider"> <!--avdelare-->
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1">En portfolio <span class="text-muted">med lekfull design</span></h2>
+                    <p class="lead">Här har jag skapat en lekfull design för min första portfolio genom att använda oväntade färger, mönster och typografi. Jag har lekt runt med olika designelement för att skapa en unik och spännande layout. Genom detta har jag skapat en interaktiv upplevelse för besökarna genom att använda animeringar och andra rörliga designelement. Jag har även använt tecknade figurer till abstrakta mönster för att göra hemsidan mer levande.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img src="img/portfoliobild.png" alt="Beskrivning av bilden" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+                </div>
+            </div>
+
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">En informativ hemsida <span class="text-muted">om internets historia</span></h2>
+                    <p class="lead">Jag har skapat ett projekt där jag har skapat en informativ sida om internets historia. Målet med detta projekt var att skapa en lättillgänglig och engagerande resurs för att lära sig om internetets utveckling och historia från dess födelse till idag.</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="img/inter.png" alt="Beskrivning av bilden" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+                </div>
+            </div>
+
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1">En stilren och attraktiv sida: <span class="text-muted">för möbler och dekoration, i världsklass!</span></h2>
+                    <p class="lead">Jag har använt en palett av jordnära färger för att skapa en harmonisk och engagerande webbplats som väcker uppmärksamhet och lämnar ett intryck. Min designfilosofi bygger på att skapa en webbplats som är användarvänlig och
+                        enkel att navigera, med en unik personlighet som representerar mig som webbutvecklare.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img src="img/fur1.png" alt="min portfolio" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"> <!--sätter grå skugga, placerar bilden som stor i elementet, definerar styling av img, responsiv till föräldrar element, centrerad-->
+                </div>
+            </div>
+
+            <!-- slut påFEATURETTES -->
+
+        </div>
+
+    </div> <!-- /container -->
+
+
+</main>
+
+
+<footer class="jumbotron">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="img/bettinatransp.png" alt="Logo" width="150" height="150">
+            </div>
+            <div class="col-md-4">
+                <h5 class="mb-3">Sidor</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-light">Hem</a></li>
+                    <li><a href="minaprojekt.html" class="text-light">Mina projekt</a></li>
+                    <li><a href="OmMig.html" class="text-light">Om mig</a></li>
+                    <li><a href="KontakaMig.html" class="text-light">Kontakta mig</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="col-md-4">
+                <h5 class="mb-3">Följ mig!</h5>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://www.facebook.com/bbettinatoth"
+                                                    class="text-light"><i
+                            class="fab fa-facebook-f fa-lg"></i></a></li>
+                    <li class="list-inline-item"><a href="" class="text-light"><i
+                            class="fab fa-twitter fa-lg"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/bettinatothh/"
+                                                    class="text-light"><i
+                            class="fab fa-linkedin fa-lg"></i></a></li>
+                    <li class="list-inline-item"><a href="https://github.com/Betttina"
+                                                    class="text-light"><i
+                            class="fab fa-github fa-lg"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.instagram.com/bettobox/"
+                                                    class="text-light"><i
+                            class="fab fa-instagram fa-lg"></i></a></li>
+                    <li class="list-inline-item"></li>
+
+
+                </ul>
+                <div class="d-flex align-items-end justify-content-end">
+                    <p class="me-3 mb-0">Scrolla upp till toppen</p>
+                    <a href="#navbarNav" class="btn btn-primary rounded-circle"><i
+                            class="fas fa-arrow-up"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
+
+
+
+
+
+
+</body>
+</html>
+
+<!-- Länk till Bootstrap JavaScript-filen (placera den längst ner i din HTML-fil) -->
+<script src="./bootstrap-5.3.0-alpha1-dist/bootstrap-5.3.0-alpha1-dist/js/bootstrap.js"></script>
+<script src="portfolio.js"></script>
+<!--länk till quiery js-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>

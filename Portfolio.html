@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--sidans skala till enheten-->
+    <meta name="description" content="Min portfoliosida som är ett skolprojekt på Grit Academy"> <!--En kort beskrivning av denna sidan som man ser när man söker på det-->
+    <meta name="keywords" content="projekt, webbutveckling, design, portfolio, restaurang, hemsida"> <!--nyckelord som beskriver innehållet på sidan kommer att finnas i sökresultatet.-->
+    <meta name="author" content="bettina.nu">
+
+    <!--titel på hemsidan-->
+    <title>Portfolio hemsida</title>
+
+    <link rel="shortcut icon" href="img/seal.png" type="image/x-icon">
+
+    <!-- CSS fil länkad-->
+    <link rel="stylesheet" href="hemsidan.css">
+    <!--länk till bootstrapfiler-->
+    <link rel="stylesheet" href="./bootstrap-5.3.0-alpha1-dist/bootstrap-5.3.0-alpha1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+</head>
+<body>
+<!--navigationsmeny med bootstrapkomponent-->
+<nav class="navbar navbar-expand-md navbar-light navbar-transparent">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/bettinatransp.png" alt="Logo" width="280" height="200" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Hem</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="minaprojekt.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mina projekt</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="minaprojekt.html">Presentation av projekten</a></li>
+                        <li><a class="dropdown-item" href="KoreanskResturangHemsida.html">Restauranghemsida</a></li>
+                        <li><a class="dropdown-item" href="Portfolio.html">Portfoliohemsida</a></li>
+                        <li><a class="dropdown-item" href="projekt4.html">Informativ hemsida</a></li>
+                        <li><a class="dropdown-item" href="projekt3.html">Möbelhemsida</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="OmMig.html">Om mig</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="KontakaMig.html">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<h1>Min första: <br><span class="animated-text">Portfoliohemsida</span></h1> <!--Huvudtitel med animation på andra textdelen-->
+
+<main>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="img/port2.png" class="card-img-top" alt="form">
+                    <div class="card-body">
+                        <p class="card-text">Mitt kontaktformulär</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="img/port5.png" class="card-img-top" alt="galleri">
+                    <div class="card-body">
+                        <p class="card-text">En inspirationsgalleri</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"> <!--3 kolumner av 12, tar upp plats på mediumskärmstorlek-->
+                <div class="card">
+                    <img src="img/port1.png" class="card-img-top" alt="info">
+                    <div class="card-body">
+                        <p class="card-text">Info om mig</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10"> <!--kolumn, tar upp 10 av 12 platser, mediumskärm-->
+            <div class="card"> <!--bra presentationskomponent från bootstrap, bra för bild och text-->
+                <div class="card-body">
+                    <p class="card-text">Här har jag skrivit informativ och beskrivande text.</p><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-10 col-md-8 col-lg-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Länk till mitt projekt</h5>
+                    <p class="text-center">Ta gärna en titt på hemsidan! <i class="far fa-smile"></i> </p>
+                    <a href="https://betttina.github.io/webb23-html-mp1-bettina/index.html" class="btn btn-primary">Gå till projektet <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<!--footer-->
+<footer class="jumbotron">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="img/bettinatransp.png" alt="Logo" width="150" height="150">
+            </div>
+            <div class="col-md-4">
+                <h5 class="mb-3">Sidor</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-light">Hem</a></li>
+                    <li><a href="minaprojekt.html" class="text-light">Mina projekt</a></li>
+                    <li><a href="OmMig.html" class="text-light">Om mig</a></li>
+                    <li><a href="KontakaMig.html" class="text-light">Kontakta mig</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5 class="mb-3">Följ mig!</h5>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://www.facebook.com/bbettinatoth" class="text-light"><i
+                            class="fab fa-facebook-f fa-lg"></i></a></li>
+                    <li class="list-inline-item"><a href="" class="text-light"><i class="fab fa-twitter fa-lg"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/bettinatothh/"
+                                                    class="text-light"><i
+                            class="fab fa-linkedin fa-lg"></i></a></li>
+                    <li class="list-inline-item"><a href="https://github.com/Betttina"
+                                                    class="text-light"><i
+                            class="fab fa-github fa-lg"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.instagram.com/bettobox/"
+                                                    class="text-light"><i
+                            class="fab fa-instagram fa-lg"></i></a></li>
+                    <li class="list-inline-item"></li>
+                </ul>
+                <div class="d-flex align-items-end justify-content-end">
+                    <p class="me-3 mb-0">Scrolla upp till toppen</p>
+                    <a href="#" class="btn btn-primary rounded-circle"><i
+                            class="fas fa-arrow-up"></i></a>
+                </div>
+                <div class="d-flex align-items-end justify-content-end">
+                    <p class="me-1 mb-0 small">&copy; Bettina. Alla rättigheter förbehållna.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
+
+<!-- Länk till Bootstrap JavaScript-filen (placera den längst ner i din HTML-fil) -->
+<script src="./bootstrap-5.3.0-alpha1-dist/bootstrap-5.3.0-alpha1-dist/js/bootstrap.js"></script>
+<script src="portfolio.js"></script>
+<!--länk till quiery js-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>

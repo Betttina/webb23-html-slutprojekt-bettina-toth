@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bettina</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--sidans skala till enheten-->
+    <meta name="description" content="Min portfoliosida som är ett skolprojekt på Grit Academy"> <!--En kort beskrivning av denna sidan som man ser när man söker på det-->
+    <meta name="keywords" content="projekt, webbutveckling, design, portfolio, restaurang, hemsida"> <!--nyckelord som beskriver innehållet på sidan kommer att finnas i sökresultatet.-->
+    <meta name="author" content="bettina.nu">
+
+    <!--titel på hemsidan-->
+    <title>Bettinas portfolio</title>
+
+    <link rel="shortcut icon" href="img/seal.png" type="image/x-icon">
+
+    <!-- Link CSS file -->
+    <link rel="stylesheet" href="hemsidan.css">
+    <!-- Länk till Bootstrap CSS-filen -->
+    <link rel="stylesheet" href="./bootstrap-5.3.0-alpha1-dist/bootstrap-5.3.0-alpha1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+<body>
+
+
+<!--navigationsmeny med bootstrapkomponent-->
+<nav class="navbar navbar-expand-md navbar-light navbar-transparent"> <!--navbar som sträcker sig med genomskinglig bakgrund-->
+    <div class="container-fluid"> <!--behållare som tar upp hela utrymmet, bootstrap komponent-->
+        <a class="navbar-brand" href="index.html"> <!--definerar en logo som fungerar som en länk-->
+            <img src="Ny mapp/bettinatransp.png" alt="Logo" width="280" height="200" class="d-inline-block align-text-top"> <!--sätter bilden som ett block, horisontellt, elementet vertikalt centralt med text bredvid-->
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <!--visa och dölja navmeny, responsiv, utseende när de åker upp och ner och utseende på knapp-->
+            <span class="navbar-toggler-icon"></span> <!--knapp med valbar knapp, viss utseende-->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav"> <!--skapar ul nav meny-->
+                <li class="nav-item"> <!--skapar lista i navbar-->
+                    <a class="nav-link" href="index.html">Hem</a>
+                </li>
+                <li class="nav-item dropdown"> <!--meny som rullar ner från navbar-->
+                    <a class="nav-link dropdown-toggle" href="minaprojekt.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mina projekt</a> <!--beteende på action-->
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> <!--submenyer som åker neråt från Mina projekt-->
+                        <li><a class="dropdown-item" href="minaprojekt.html">Presentation av projekten</a></li>
+                        <li><a class="dropdown-item" href="KoreanskResturangHemsida.html">Restauranghemsida</a></li>
+                        <li><a class="dropdown-item" href="Portfolio.html">Portfoliohemsida</a></li>
+                        <li><a class="dropdown-item" href="projekt4.html">Informativ hemsida</a></li>
+                        <li><a class="dropdown-item" href="projekt3.html">Möbelhemsida</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"> <!--annat list element-->
+                    <a class="nav-link" href="OmMig.html">Om mig</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="KontakaMig.html">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main content -->
+<main>
+
+    <h1>Din framtida webbutvecklare:<br><span class="animated-text">Bettina</span></h1>
+
+
+    <div class="container my-8">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-9">
+                <div class="card p-4 shadow-lg rounded-lg">
+                    <div class="card-body">
+                        <h2 class="card-title mb-4">Välkommen till min hemsida</h2>
+                        <p class="card-text">Jag är en webbutvecklare med fokus på moderna teknologier och användarvänliga designlösningar. Mitt mål är att skapa webbplatser som inte bara ser snygga ut, utan också är lätta att använda för alla besökare. Genom att kombinera min passion för teknik och kreativitet kan jag hjälpa dig att förverkliga din vision online.</p>
+                        <a href="minaprojekt.html" class="btn btn-primary mt-3">Se mina projekt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section id="portfolio" class="bg-light py-5"> <!--bra komponent för att visa upp olika projekt-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 text-center mb-5">
+                    <h2 class="display-4">Mina projekt</h2>
+                    <p class="lead"> Här är några av mina mest imponerande projekt som jag har arbetat på. Varje projekt är en unik kreation som är skapad med en kombination av mina kreativa förmågor och tekniska färdigheter. Jag strävar alltid efter att skapa webbplatser som inte bara ser bra ut utan också är användarvänliga och optimerade för sökmotorer. </p>
+                    <p class="lead"> Klicka på respektive projekt för att se mer information och koden bakom webbplatsen. Genom att utforska mina projekt får du en djupare förståelse för mina färdigheter och kreativa förmågor som webbutvecklare. </p>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="row">
+                <div class="col-md-4 mb-5">
+                    <div class="card h-100">
+                        <img src="img/portfoliobild.png" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h3 class="card-title">En portfoliohemsida</h3>
+                            <p class="card-text">Denna portfoliohemsida kännetecknas av färgglada animeringar, rörliga bilder och cool layout </p>
+                            <a href="Portfolio.html" class="btn btn-primary">Läs mer</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <div class="card h-100">
+                        <img src="img/koreana1.png" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h3 class="card-title">Koreansk restaurang</h3>
+                            <p class="card-text">En komplett restauranghemsida med varma färger, responsiv layout och en modern uppfräschning </p>
+                            <a href="KoreanskResturangHemsida.html" class="btn btn-primary">Läs mer</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-5">
+                        <div class="card h-100">
+                            <img src="img/furniture.png" class="card-img-top" alt="Project 1">
+                            <div class="card-body">
+                                <h3 class="card-title">E-handelsplattform för möbler</h3>
+                                <p class="card-text">En hemsida som erhåller försäljning och presentation av snygga möbler </p>
+                                <a href="projekt3.html" class="btn btn-primary">Läs mer</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <div class="card h-100">
+                            <img src="img/portsal.png" class="card-img-top" alt="Project 2">
+                            <div class="card-body">
+                                <h3 class="card-title">Portfolio variant</h3>
+                                <p class="card-text">Test av olika animationer, typsnitt och lekfulla färgkombinationer. Ett av mina första projekt </p>
+                                <a href="projekt4.html" class="btn btn-primary">Läs mer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container my-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="fw-bold">Vad är en <span>webbutvecklare?</span>
+                    </h1>
+                    <p class="lead"> Som <span>webbutvecklarstudent</span> är jag medveten om hur viktigt det är att utveckla teknik som kan förbättra samhället och lösa samhällsproblem. En webbutvecklare är en professionell person som skapar webbplatser och webbapplikationer med hjälp av kodningsspråk som HTML, CSS och JavaScript. Webbutvecklare spelar en central roll i dagens digitala värld, där allt mer av vår kommunikation och affärsverksamhet flyttar online. Genom att skapa säkra, användarvänliga och effektiva webbapplikationer, kan webbutvecklare bidra till att förenkla våra liv och göra affärer mer tillgängliga för alla. </p>
+                    <p class="lead"> Med den ökande efterfrågan på webbutveckling i dagens samhälle finns det en spännande framtid för personer som är intresserade av att lära sig dessa tekniska färdigheter och bidra till att forma framtiden för vår digitala värld. Som webbutvecklare har jag möjlighet att omsätta min passion för teknologi till verkliga projekt och skapa lösningar som kan hjälpa till att förbättra människors liv. Genom att ha en stark förståelse för användarbehov och tekniska krav kan jag skapa webbapplikationer och digitala verktyg som gör vardagen enklare och mer effektiv för människor över hela världen. </p>
+                    <a href="OmMig.html" class="btn btn-primary">Läs mer om mig</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="img/program.jpeg" class="img-fluid" alt="bild på en dator med kod">
+                    <img src="img/plan.webp" class="img-fluid" alt="uxdesign planering">
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!--footer-->
+    <footer class="jumbotron">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="Ny mapp/bettinatransp.png" alt="Logo" width="150" height="150">
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Sidor</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light">Hem</a></li>
+                        <li><a href="minaprojekt.html" class="text-light">Mina projekt</a></li>
+                        <li><a href="OmMig.html" class="text-light">Om mig</a></li>
+                        <li><a href="KontakaMig.html" class="text-light">Kontakta mig</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Följ mig!</h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="https://www.facebook.com/bbettinatoth" class="text-light"><i
+                                class="fab fa-facebook-f fa-lg"></i></a></li>
+                        <li class="list-inline-item"><a href="" class="text-light"><i class="fab fa-twitter fa-lg"></i></a></li>
+                                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/bettinatothh/"
+                                                                            class="text-light"><i
+                                                    class="fab fa-linkedin fa-lg"></i></a></li>
+                                            <li class="list-inline-item"><a href="https://github.com/Betttina"
+                                                                            class="text-light"><i
+                                                    class="fab fa-github fa-lg"></i></a></li>
+                                            <li class="list-inline-item"><a href="https://www.instagram.com/bettobox/"
+                                                                            class="text-light"><i
+                                                    class="fab fa-instagram fa-lg"></i></a></li>
+                                            <li class="list-inline-item"></li>
+                                        </ul>
+                                        <div class="d-flex align-items-end justify-content-end">
+                                            <p class="me-3 mb-0">Scrolla upp till toppen</p>
+                                            <a href="#" class="btn btn-primary rounded-circle"><i
+                                                    class="fas fa-arrow-up"></i></a>
+                                        </div>
+                                        <div class="d-flex align-items-end justify-content-end">
+                                            <p class="me-1 mb-0 small">&copy; Bettina. Alla rättigheter förbehållna.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+
+
+</main>
+
+
+</body>
+</html>
+
+
+<!-- Länk till Bootstrap JavaScript-filen (placera den längst ner i din HTML-fil) -->
+<script src="./bootstrap-5.3.0-alpha1-dist/bootstrap-5.3.0-alpha1-dist/js/bootstrap.js"></script>
+<script src="portfolio.js"></script>
+<!--länk till quiery js-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
